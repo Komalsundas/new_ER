@@ -1,0 +1,80 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 25px;
+}
+
+.card {
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.card-header {
+    background-color: #b3b7bd;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 50px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.link {
+    color: blue;
+    text-decoration: none; /* Remove underline */
+    margin-right: 20px; /* Add space between links */
+}
+.link:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+}
+.link-container {
+    text-align: center; /* Center-align the links horizontally */
+}
+h2 {
+    color: black;
+    font-family: Georgia, serif;
+}
+.form-control {
+    font-family: Arial, sans-serif; /* Change the font family as needed */
+}
+.custom-input {
+    font-family: Arial, sans-serif;
+}
+.form-label {
+    font-size: 14px; /* Adjust the font size as needed */
+    font-family: Georgia, serif; /* Change the font family to your preference */
+}
+
+.form-control {
+    font-size: 25px; /* Adjust the font size as needed */
+    font-family: Georgia, serif; /* Change the font family to your preference */
+}
+.input-group-text {
+    font-size: px; /* Adjust the font size as needed */
+    font-family: Georgia, serif; /* Change the font family to your preference */
+}
+.custom-input {
+    height: 60px; /* Adjust the height as needed */
+    padding: 100px; /* Adjust the padding as needed */
+}
+table {
+    font-family: Georgia, serif; /* Change to the desired font family */
+    font-size: 13px;
+}
+.form-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
