@@ -17,6 +17,16 @@
                     </x-nav-link>
                 </div>
             </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('create-vacancy')" :active="request()->routeIs('create-vacancy')">
+                    {{ __('Create Vacancy') }}
+                </x-nav-link>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('show-vacancy')" :active="request()->routeIs('show-vacancy')">
+                    {{ __('List Vacancy') }}
+                </x-nav-link>
+            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
