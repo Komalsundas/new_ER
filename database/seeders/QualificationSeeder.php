@@ -21,8 +21,12 @@ class QualificationSeeder extends Seeder
             'qualification' => 'Bachelors Degree',
         ]);
         Qualification::create([
-            'qualification' => 'Diploma/Certificates',
+            'qualification' => 'Diploma',
         ]);
+        Qualification::create([
+            'qualification' => 'Certificates VTI',
+        ]);
+
         Qualification::create([
             'qualification' => 'Class XII',
         ]);

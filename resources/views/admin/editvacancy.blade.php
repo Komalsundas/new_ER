@@ -92,9 +92,11 @@
 
             </div>
             <div class="">
-                <button type="submit" class="btn-info" id="submitBtn">Edit</button>
+                <button type="button" class="btn-success" id="submitBtn">Save</button>
+
             </div>
         </form>
     </fieldset>
 </div>
+
 @endsection
