@@ -2,18 +2,49 @@
 
 @section('content')
 
+<!--additional-->
+<!-- Include Bootstrap CSS -->
+
+    <!-- Include jQuery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Include jQuery and jQuery UI JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Include timepicker-addon JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css">
+
 <!-- Include the datepicker library CSS and JavaScript files -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
+{{-- <script>
     $(document).ready(function() {
             $("#dateline").datepicker({
-                dateFormat: "dd/mm/yy", // Set the desired date format
+                dateFormat: "dd/mm/yy:mm", // Set the desired date format
                 changeMonth: true,
                 changeYear: true,
             });
         });
+</script> --}}
+
+<script>
+    $(document).ready(function() {
+        flatpickr('.datetime', {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+    });
 </script>
+
+
+
 
 <div class="div1"></div>
 
@@ -69,7 +100,7 @@
                     <textarea type="text" class="form-control form-control-sm" name="remuneration" id="remuneration"
                         required></textarea>
                 </div>
-
+{{-- 
                 <div class="col-md-4">
                     <label for="dateline" class="form-label fw-bold small">Application Dateline</label>
                     <div class="input-group date">
@@ -78,7 +109,17 @@
                         </span>
                         <input type="text" class="form-control form-control-sm" name="dateline" id="dateline" required>
                     </div>
+                </div> --}}
+                <div class="col-md-4">
+                <div>
+                    <x-input-label for="dateline" :value="__('Application Dateline')" class="form-label fw-bold small" />
+                    <input id="dateline" name="dateline" type="text" class="datetime form-control form-control-sm mt-1 block w-full" required
+                        autofocus autocomplete="dateline" />
+                    <x-input-error class="mt-2" :messages="$errors->get('dateline')" />
                 </div>
+                </div>
+                
+           
 
                 <div class="col-md-4">
                     <label for="tor" class="form-label fw-bold small">TOR</label>

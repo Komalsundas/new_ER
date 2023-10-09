@@ -10,10 +10,19 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <!-- Include the datepicker library CSS and JavaScript files -->
     <link rel="stylesheet" href="datepicker.min.css">
     <script src="datepicker.min.js"></script>
 
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include the datepicker library CSS and JavaScript files -->
+    <link rel="stylesheet" href="datepicker.min.css">
+    <script src="datepicker.min.js"></script>
+
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
     <script src="{{ asset('js/add_row.js') }}"></script>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
@@ -87,7 +96,10 @@
                         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                         /* Add box shadow for a 3D effect */
                     }
+<<<<<<< HEAD
                     
+=======
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                 </style>
                 {{-- <div class="card custom-card" style="width: 10000px;"> --}}
                 {{-- <div class="card-body"> --}}
@@ -133,8 +145,12 @@
                         </div>
                         <div class="col-md-3">
                             <label for="coverLetter" class="form-label fw-bold small">Passport size Photo</label>
+<<<<<<< HEAD
                             <input type="file" class="form-control form-control-sm" id="coverLetter"
                                 accept="image/png, image/jpeg">
+=======
+                            <input type="file" class="form-control form-control-sm" id="coverLetter" accept="image/png, image/jpeg">
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                         </div>
                     </div>
                 </fieldset>
@@ -158,7 +174,11 @@
                         <div class="col-md-3">
                             <label for="village" class="form-label fw-bold small">Present Address</label>
                             <input type="text" class="form-control form-control-sm" id="village">
+<<<<<<< HEAD
                         </div>
+=======
+                        </div>    
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                     </div>
                 </fieldset>
                 <br>
@@ -201,7 +221,11 @@
                 <fieldset class="border p-4" style="width: 103%;">
                     <legend class="float-none w-auto p-2"
                         style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">EDUCATION DETAILS
+<<<<<<< HEAD
                     </legend>
+=======
+                    </legend>   
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                     <legend class="float-none w-auto p-2"
                         style="font-weight: bold; font-size: 13px; font-family: 'Georgia, serif;">CLASS X</legend>
                         <div class="form-row align-items-center">
@@ -212,6 +236,7 @@
                             <div class="col-3">
                                 <label for="completionYear" class="form-label fw-bold small">Completion year</label>
                                 <input type="text" class="form-control mb-2" id="Please" placeholder="Enter completion year">
+<<<<<<< HEAD
                             </div>
                             <div class="col-md-4 d-flex flex-column">
                                 <label for="cidAttachment" class="form-label fw-bold small align-self-start">Class X marksheet</label>
@@ -473,6 +498,280 @@
                                 <button type="button" class="btn btn-success" id="proceedToPreviousEmployment"
                                     style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Proceed</button>
                             </div>
+=======
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <label for="cidAttachment" class="form-label fw-bold small align-self-start">Class X marksheet</label>
+                                <input type="file" class="form-control form-control-sm align-self-end" id="cidAttachment" placeholder="Select Marksheet">
+                            </div>
+                        </div>
+                    <p style="font-size: 15px; font-family: 'Georgia, serif; color: #555; margin-left: 20px;">
+                        &#8226; Percentage is calculated based on English + best 4 subjects.<br>
+                        &#8226; Please input the subject mark as 0 if you have not taken the subject.
+                    </p>
+                    <div class="row g-2">
+                        <div class="col-md-1">
+                            <label for="fullName" class="form-label fw-bold small">Subject</label>
+                            <label for="fullName" class="form-label fw-bold small">Marks</label>
+                        </div>
+                        <div class="col-md-1">
+                            <label for="fullName" class="form-label fw-bold small">English</label>
+                            <input type="text" class="form-control form-control-sm" id="eng">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                            <input type="text" class="form-control form-control-sm" id="dzo">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Math</label>
+                            <input type="text" class="form-control form-control-sm" id="mat">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Physics</label>
+                            <input type="text" class="form-control form-control-sm" id="phy">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Chemistry</label>
+                            <input type="text" class="form-control form-control-sm" id="che">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Biology</label>
+                            <input type="text" class="form-control form-control-sm" id="bio">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Economics</label>
+                            <input type="text" class="form-control form-control-sm" id="eco">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">History</label>
+                            <input type="text" class="form-control form-control-sm" id="his">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Geography</label>
+                            <input type="text" class="form-control form-control-sm" id="geo">
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <label for="cid" class="form-label fw-bold small">IT</label>
+                            <input type="text" class="form-control form-control-sm" id="it">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="cid" class="form-label fw-bold small">Percentage</label>
+                            <input type="text" class="form-control form-control-sm" id="percent" readonly>
+                        </div>
+                        <hr>
+                        {{-- For Class XII --}}
+                        <legend class="float-none w-auto p-2"
+                            style="font-weight: bold; font-size: 13px; font-family: 'Georgia, serif;">CLASS XII</legend>
+                            <div class="form-row align-items-center">
+                                <div class="col-5">
+                                    <label for="schoolName" class="form-label fw-bold small">School Name</label>
+                                    <input type="text" class="form-control mb-2" id="schoolName" placeholder="Enter school name">
+                                </div>
+                                <div class="col-3">
+                                    <label for="completionYear" class="form-label fw-bold small">Completion year</label>
+                                    <input type="text" class="form-control mb-2" id="Please" placeholder="Enter completion year">
+                                </div>
+                                <div class="col-md-4 d-flex flex-column">
+                                    <label for="cidAttachment" class="form-label fw-bold small align-self-start">Class XII marksheet</label>
+                                    <input type="file" class="form-control form-control-sm align-self-end" id="cidAttachment" placeholder="Select Marksheet">
+                                </div>
+                            </div>
+                        <p style="font-size: 15px; font-family: 'Georgia, serif; color: #555; margin-left: 20px;">
+                            &#8226; Percentage is calculated based on English + best 3 subjects.<br>
+                            &#8226; Please input the subject mark as 0 if you have not taken the subject.
+                        </p>
+                        <br>
+                        <legend class="float-none w-auto p-1"
+                            style="font-weight: bold; font-size: 13px; font-family: 'Georgia, serif;">STREAM</legend>
+                        <div class="d-flex" style="gap: 0;">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="stream" id="scienceRadio"
+                                    onclick="showForm('science')">
+                                <label class="form-check-label" for="scienceRadio">Science</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="stream" id="commerceRadio"
+                                    onclick="showForm('commerce')">
+                                <label class="form-check-label" for="commerceRadio">Commerce</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="stream" id="artsRadio"
+                                    onclick="showForm('arts')">
+                                <label class="form-check-label" for="artsRadio">Arts</label>
+                            </div>
+                        </div>
+                        <!-- Forms for each stream -->
+                        <div id="scienceForm" style="display: none;">
+                            <div class="row g-2">
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
+                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small ">English</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="scieng">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="scidzo">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="scimat">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Physics</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="sciphy">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Chemistry</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="sciche">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Biology</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="scibio">
+                                </div>
+                                <div class="col-md-1 text-center">
+                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="sciit">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <input type="text" class="form-control form-control-sm sciencemark" id="scipercent">
+                                </div>
+                            </div>
+                        </div>
+                            {{-- COMMERCE --}}
+                        <div id="commerceForm" style="display: none;">
+                            <div class="row g-2">
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
+                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small">English</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comeng">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comdzo">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="commat">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Commerce</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comcom">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Economic</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comeco">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Accountancy</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comacc">
+                                </div>
+                                <div class="col-md-1 text-center">
+                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="comit">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <input type="text" class="form-control form-control-sm commersemark" id="compercent">
+                                </div>
+                            </div>
+                        </div>
+                            {{-- ARTS --}}
+                        <div id="artsForm" style="display: none;">
+                            <div class="row g-2">
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
+                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="fullName" class="form-label fw-bold small">English</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="arteng">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="artdzo">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="artmat">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Geography</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="artgeo">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">History</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="arthis">
+                                </div>
+                                <div class="col-md-1 text-center">
+                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="artit">
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <input type="text" class="form-control form-control-sm artsmark" id="artpercent">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function showForm(stream) {
+                                // Hide all forms
+                                document.getElementById('scienceForm').style.display = 'none';
+                                document.getElementById('commerceForm').style.display = 'none';
+                                document.getElementById('artsForm').style.display = 'none';
+
+                                // Show the selected form
+                                document.getElementById(stream + 'Form').style.display = 'block';
+                            }
+                        </script>
+                        <hr>
+                        {{-- For Class Degree --}}
+                     <legend class="float-none w-auto p-1"
+                        style="font-weight: bold; font-size: 13px; font-family: 'Georgia, serif;">DEGREE</legend>  
+                        <div class="form-row align-items-center">
+                            <div class="col-4">
+                                <label for="schoolName" class="form-label fw-bold small">University Name</label>
+                                <input type="text" class="form-control mb-2" id="schoolName" placeholder="Enter university name">
+                            </div>
+                            <div class="col-3">
+                                <label for="completionYear" class="form-label fw-bold small">Course Name</label>
+                                <input type="text" class="form-control mb-2" id="Please" placeholder="Enter course name">
+                            </div>
+                            <div class="col-2">
+                                <label for="completionYear" class="form-label fw-bold small">Completion year</label>
+                                <input type="text" class="form-control mb-2" id="Please" placeholder="Completion year">
+                            </div>
+                            <div class="col-md-3 d-flex flex-column">
+                                <label for="cidAttachment" class="form-label fw-bold small align-self-start">Class XII marksheet</label>
+                                <input type="file" class="form-control form-control-sm align-self-end" id="cidAttachment" placeholder="Select Marksheet">
+                            </div>
+                            
+                    </div>  
+                    {{-- <div class="row g-1">
+                        <div class="col-md-3">
+                            <label for="coverLetter" class="form-label fw-bold small">Academic Certificate</label>
+                            <input type="file" class="form-control form-control-sm" id="coverLetter">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="cidAttachment" class="form-label fw-bold small">Marksheet Certificate</label>
+                            <input type="file" class="form-control form-control-sm" id="cidAttachment">
+                        </div>
+                    </div> --}}
+                    <br>
+                    <div style="text-align: right;">
+                        <button type="button" class="btn btn-secondary" id="backToproceedButton"
+                            style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #7d7d7d; color: white;">Back</button>
+
+                        <button type="button" class="btn btn-success" id="proceedToPreviousEmployment"
+                            style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Proceed</button>
+                    </div>
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                 </fieldset>
                 {{-- scrpit for adding new row in education --}}
                 <script>
@@ -486,7 +785,11 @@
                             var newRow = $("<tr>");
                             var cols = '';
                             // Table columns
+<<<<<<< HEAD
                             cols += '<th scope="row">' + educationCounter + '</th>';
+=======
+                            cols += '<th scope="row">' +  educationCounter + '</th>';
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                             cols +=
                                 '<td><input class="form-control" type="text" name="institute" placeholder="Name of institute"></td>';
                             cols +=
@@ -636,6 +939,29 @@
                                 <button type="button" class="btn btn-success" id="openModalBtn"
                                     style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Done</button>
 
+<<<<<<< HEAD
+=======
+                            </div>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#openModalBtn").click(function() {
+                                        $("#disclaimerModal").modal("show");
+                                    });
+                                });
+                            </script>
+                            {{-- script for submit buttom --}}
+                            <script>
+                                $("#agreeCheckbox").change(function() {
+                                    if ($(this).is(":checked")) {
+                                        $("#submitForm").removeClass("d-none");
+                                    } else {
+                                        $("#submitForm").addClass("d-none");
+                                    }
+                                });
+                            </script>
+                        </fieldset>
+                        {{-- 
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
                             </div>
                             <script>
                                 $(document).ready(function() {
@@ -717,9 +1043,16 @@
         {{-- script for proceed button --}}
         <script>
             // document.getElementById("proceedButton").addEventListener("click", function() {
+<<<<<<< HEAD
             $('#proceedButton').click(function() {
                 $('#profile-tab0').tab('show');
             });
+=======
+            $('#proceedButton').click( function(){
+                $('#profile-tab0').tab('show');
+            });
+            
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
         </script>
         <script>
             // Add an event listener to the "Proceed" button in the "Education" tab
@@ -739,6 +1072,7 @@
             });
         </script>
 
+<<<<<<< HEAD
         <script>
             $(document).ready(function() {
                 $('#dzo').on('change', function() {
@@ -750,6 +1084,152 @@
             });
         </script>
 
+=======
+        {{-- <script>
+            $(document).ready(function(){
+                $('#dzo').on('change', function(){
+                var eng = $('#eng').val();
+                var dzo = $('#dzo').val();
+                $('#percent').val(parseInt(eng)+ parseInt(dzo));
+                })
+                
+            });
+        </script> --}}
+
+        <script>
+            $(document).ready(function(){
+                // Listen for changes in the input fields
+                $('#eng, #dzo, #mat, #phy, #che, #bio, #eco, #his, #geo, #it').on('input', function(){
+                    // Get the marks for English and all subjects
+                    var eng = parseFloat($('#eng').val()) || 0;
+                    var dzo = parseFloat($('#dzo').val()) || 0;
+                    var mat = parseFloat($('#mat').val()) || 0;
+                    var phy = parseFloat($('#phy').val()) || 0;
+                    var che = parseFloat($('#che').val()) || 0;
+                    var bio = parseFloat($('#bio').val()) || 0;
+                    var eco = parseFloat($('#eco').val()) || 0;
+                    var his = parseFloat($('#his').val()) || 0;
+                    var geo = parseFloat($('#geo').val()) || 0;
+                    var it = parseFloat($('#it').val()) || 0;
+        
+                    // Sort the subject marks in descending order
+                    var subjects = [dzo, mat, phy, che, bio, eco, his, geo, it];
+                    subjects.sort(function(a, b) {
+                        return b - a;
+                    });
+        
+                    // Calculate the total of the best four subjects
+                    var total = eng + subjects.slice(0, 4).reduce(function(a, b) { return a + b; }, 0);
+        
+                    // Calculate the percentage
+                    var percentage = (total / 500) * 100; // Assuming total marks for all subjects are 500
+        
+                    // Set the calculated percentage in the 'percent' input field
+                    $('#percent').val(percentage.toFixed(2)); // Rounded to two decimal places
+                });
+            });
+        </script>
+        
+        <!--For class 12 science-->
+        <script>
+            $(document).ready(function(){
+                // Listen for changes in the input fields
+                $('.sciencemark').on('input', function(){
+                    // Get the marks for English and all subjects
+                    var eng = parseFloat($('#scieng').val()) || 0;
+                    var dzo = parseFloat($('#scidzo').val()) || 0;
+                    var mat = parseFloat($('#scimat').val()) || 0;
+                    var phy = parseFloat($('#sciphy').val()) || 0;
+                    var che = parseFloat($('#sciche').val()) || 0;
+                    var bio = parseFloat($('#scibio').val()) || 0;
+                    var it = parseFloat($('#sciit').val()) || 0;
+        
+                    // Sort the subject marks in descending order
+                    var subjects = [dzo, mat, phy, che, bio, it];
+                    subjects.sort(function(a, b) {
+                        return b - a;
+                    });
+        
+                    // Calculate the total of the best four subjects
+                    var total = eng + subjects.slice(0, 3).reduce(function(a, b) { return a + b; }, 0);
+        
+                    // Calculate the percentage
+                    var percentage = (total / 400) * 100; // Assuming total marks for all subjects are 500
+        
+                    // Set the calculated percentage in the 'scipercent' input field
+                    $('#scipercent').val(percentage.toFixed(2)); // Rounded to two decimal places
+                });
+            });
+        </script>
+
+         <!--For class 12 commerce-->
+         <script>
+            $(document).ready(function(){
+                // Listen for changes in the input fields
+                $('.commersemark').on('input', function(){
+                    // Get the marks for English and all subjects
+                    var eng = parseFloat($('#comeng').val()) || 0;
+                    var dzo = parseFloat($('#comdzo').val()) || 0;
+                    var mat = parseFloat($('#commat').val()) || 0;
+                    var com = parseFloat($('#comcom').val()) || 0;
+                    var eco = parseFloat($('#comeco').val()) || 0;
+                    var acc = parseFloat($('#comacc').val()) || 0;
+                    var it = parseFloat($('#comit').val()) || 0;
+        
+                    // Sort the subject marks in descending order
+                    var subjects = [dzo, mat, com, eco, acc, it];
+                    subjects.sort(function(a, b) {
+                        return b - a;
+                    });
+        
+                    // Calculate the total of the best four subjects
+                    var total = eng + subjects.slice(0, 3).reduce(function(a, b) { return a + b; }, 0);
+        
+                    // Calculate the percentage
+                    var percentage = (total / 400) * 100; // Assuming total marks for all subjects are 500
+        
+                    // Set the calculated percentage in the 'scipercent' input field
+                    $('#compercent').val(percentage.toFixed(2)); // Rounded to two decimal places
+                });
+            });
+        </script>
+        
+            <!--For class 12 arts-->
+            <script>
+                $(document).ready(function(){
+                    // Listen for changes in the input fields
+                    $('.artsmark').on('input', function(){
+                        // Get the marks for English and all subjects
+                        var eng = parseFloat($('#arteng').val()) || 0;
+                        var dzo = parseFloat($('#artdzo').val()) || 0;
+                        var mat = parseFloat($('#artmat').val()) || 0;
+                        var geo = parseFloat($('#artgeo').val()) || 0;
+                        var his = parseFloat($('#arthis').val()) || 0;
+                        var it = parseFloat($('#artit').val()) || 0;
+            
+                        // Sort the subject marks in descending order
+                        var subjects = [dzo, mat, geo, his, it];
+                        subjects.sort(function(a, b) {
+                            return b - a;
+                        });
+            
+                        // Calculate the total of the best four subjects
+                        var total = eng + subjects.slice(0, 3).reduce(function(a, b) { return a + b; }, 0);
+            
+                        // Calculate the percentage
+                        var percentage = (total / 400) * 100; // Assuming total marks for all subjects are 500
+            
+                        // Set the calculated percentage in the 'scipercent' input field
+                        $('#artpercent').val(percentage.toFixed(2)); // Rounded to two decimal places
+                    });
+                });
+            </script>
+
+
+        
+
+
+>>>>>>> 59e0f0d83cb0d7df17226b9f1e76597956071e24
     </div>
 
     {{-- </body> --}}

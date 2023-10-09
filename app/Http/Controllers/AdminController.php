@@ -91,6 +91,7 @@ class AdminController extends Controller
                         ->get();
         return view('admin.listVacancy', compact('vacancies'));
     }
+
     public function showVacancyUser()
 {
     $vacancies = DB::table('vacancies')
@@ -99,6 +100,7 @@ class AdminController extends Controller
 
     return view('vacancy', compact('vacancies'));
 }
+
 
 
     /**
@@ -111,4 +113,17 @@ class AdminController extends Controller
         $vacancy = Vacancy::find($id);
         return view('admin.editVacancy', compact('vacancy','minQuali', 'empType'));
 }
+
+
+public function dashboard()
+{
+    $vacancies = DB::table('vacancies')
+                ->select('vacancies.*')
+                ->get();
+
+    return view('dashboard', compact('vacancies'));
+}
+
+
+
 }
