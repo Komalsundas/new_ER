@@ -114,13 +114,46 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                    
+                            @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">
-                                 
+
                                     {{ __('Login') }}
                                     <i class="fas fa-sign-in-alt"></i>
                                 </a>
                             </li>
+
+                            @else
+                            <li class="nav-item ml-2 mr-2 mt-1">
+                                <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard')
+                                    }}</a>
+                            </li>
+                            
+
+                            <li class="nav-item ml-2 mr-2 mt-1">
+                                <a class="nav-link" href="{{ route('create-vacancy') }}">{{ __('Create
+                                    Vacancy')
+                                    }}</a>
+                            </li>
+
+                            <li class="nav-item ml-2 mr-2 mt-1">
+                                <a class="nav-link" href="{{ route('show-vacancy') }}">{{ __('Vacancy
+                                    List')
+                                    }}</a>
+                            </li>
+
+                            <li class="nav-item ml-2 mr-2 mt-1">
+                                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">{{ __('Logout') }}
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="">
+                                    @csrf
+                                </form>
+
+                            </li>
+                            @endguest
 
                     
                         </ul>
