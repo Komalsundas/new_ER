@@ -36,30 +36,32 @@
     {{-- </head>
 
     <body> --}}
-    <div class="div1">
-        <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
-            <li class="nav-item active" role="presentation">
-                <button class="nav-link" id="home-tab0" data-bs-toggle="tab" data-bs-target="#home0" type="button"
-                    role="tab" aria-controls="home0" aria-selected="true" style="font-family: Georgia, serif;">
+    <div class="div1 d-flex align-items-start">
+        <ul class="nav nav-tabs mb-3 mr-4 py-4 px-3 d-flex flex-column" id="myTab0" role="tablist" 
+        style="background-color: rgba(0,0,0,0.05); border-radius: 4px; white-space: nowrap;
+         position: sticky; top: 110px; z-index: 1;">
+            <li class="nav-item mb-2 active" role="presentation">
+                <button class="nav-link w-100 text-left" id="home-tab0" data-bs-toggle="tab" data-bs-target="#home0" type="button"
+                    role="tab" aria-controls="home0" aria-selected="true">
                     Applicant Information
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link " id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0" type="button"
-                    role="tab" aria-controls="profile0" aria-selected="false"style="font-family: Georgia, serif;">
+            <li class="nav-item mb-2" role="presentation">
+                <button class="nav-link w-100 text-left" id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0" type="button"
+                    role="tab" aria-controls="profile0" aria-selected="false">
                     Eduaction
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="exp-tab0" data-bs-toggle="tab" data-bs-target="#exp0" type="button"
-                    role="tab" aria-controls="exp0" aria-selected="false"style="font-family: Georgia, serif;">
+                <button class="nav-link w-100 text-left" id="exp-tab0" data-bs-toggle="tab" data-bs-target="#exp0" type="button"
+                    role="tab" aria-controls="exp0" aria-selected="false">
                     Previous Employement
                 </button>
             </li>
            
         </ul>
         <br>
-        <div class="tab-content" id="myTabContent0">
+        <div class="tab-content px-4 py-3" id="myTabContent0" style="background-color: rgba(0,0,0,0.05); border-radius: 4px;">
             <div class="tab-pane fade show active" id="home0" role="tabpanel" aria-labelledby="home-tab0">
                 <!-- Applicant Information -->
                 {{-- <div class="container"> --}}
@@ -72,6 +74,11 @@
                             padding: 20px;
                             width: 8000px;
                         }
+
+                        input {
+                         font-family: var(--bs-body-font-family) !important;
+                        }
+
 
                         .custom-card:hover {
                             box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
@@ -92,104 +99,105 @@
                     </style>
                     {{-- <div class="card custom-card" style="width: 10000px;"> --}}
                         {{-- <div class="card-body"> --}}
-                            <fieldset class="border p-4"style="max-width: 9020px;">
-                                <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">PERSONAL DETAILS</legend>
-                            <div class="row g-3">
-                                <div class="col-md-3">
-                                    <label for="fullName" class="form-label fw-bold small">Full Name</label>
-                                    <input type="text" class="form-control form-control-sm" id="fullName">
+                            <!-- <fieldset class="border p-4" style="max-width: 9020px;"> -->
+                                <p class="mx-2" style="font-weight: bold; font-size: 16px;">PERSONAL DETAILS</p>
+                            <div class="row g-3 ml-0">
+                                <div class="col-md-6 px-2">
+                                    <label for="fullName" class="fw-bold small">Full Name</label>
+                                    <input type="text" class="form-control form-control" id="fullName">
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="cid" class="form-label fw-bold small">CID</label>
-                                    <input type="text" class="form-control form-control-sm" id="cid">
+                                <div class="col-md-6 px-2">
+                                    <label for="cid" class="fw-bold small">CID</label>
+                                    <input type="text" class="form-control form-control" id="cid">
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="dob" class="form-label fw-bold small">DOB</label>
+                                <div class="col-md-6 px-2">
+                                    <label for="dob" class="fw-bold small">DOB</label>
                                     <div class="input-group">
                                         <span class="input-group-text">
                                             <i class="fas fa-calendar"></i>
                                         </span>
-                                        <input type="text" class="form-control form-control-sm" id="dob">
+                                        <input type="text" class="form-control form-control" id="dob">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="gender" class="form-label fw-bold small">Gender</label>
-                                    <select class="form-select form-select-sm" id="gender">
+                                <div class="col-md-6 px-2">
+                                    <label for="gender" class="fw-bold">Gender</label>
+                                    <select class="form-select form-select" id="gender">
                                         <option selected>Select One</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="contactNumber" class="form-label fw-bold small">Contact Number</label>
+                                <div class="col-md-6 px-2">
+                                    <label for="contactNumber" class="fw-bold">Contact Number</label>
                                     <div class="input-group">
                                         <div class="input-group-text" style="font-size: x-small;">975</div>
-                                        <input type="text" class="form-control form-control-sm" id="contactNumber">
+                                        <input type="text" class="form-control form-control" id="contactNumber">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="email" class="form-label fw-bold small">Email</label>
-                                    <input type="text" class="form-control form-control-sm" id="email">
+                                <div class="col-md-6 px-2">
+                                    <label for="email" class="fw-bold">Email</label>
+                                    <input type="text" class="form-control form-control" id="email">
                                 </div>
                             </div>
-                            </fieldset>
+                            <!-- </fieldset> -->
                         {{-- </div> --}}
                     {{-- </div> --}}
                     {{-- <div class="card custom-card">
                         <div class="card-body"> --}}
                             <br>
-                            <fieldset class="border p-4">
-                                <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">PERMENANT ADDRESS</legend>
+                            <!-- <fieldset class="border p-4"> -->
+                                <legend class="float-none w-auto p-2" 
+                                style="font-weight: bold; font-size: 16px;">PERMENANT ADDRESS</legend>
                             <div class="row g-3">
                                 <div class="col-md-3">
-                                    <label for="dzongkhag" class="form-label fw-bold small">Dzongkhag</label>
-                                    <input type="text" class="form-control form-control-sm" id="dzongkhag">
+                                    <label for="dzongkhag" class="fw-bold">Dzongkhag</label>
+                                    <input type="text" class="form-control form-control" id="dzongkhag">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="gewog" class="form-label fw-bold small">Gewog</label>
-                                    <input type="text" class="form-control form-control-sm" id="gewog">
+                                    <label for="gewog" class="fw-bold">Gewog</label>
+                                    <input type="text" class="form-control form-control" id="gewog">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="village" class="form-label fw-bold small">Village</label>
-                                    <input type="text" class="form-control form-control-sm" id="village">
+                                    <label for="village" class="fw-bold">Village</label>
+                                    <input type="text" class="form-control form-control" id="village">
                                 </div>
                                 <div class="col-md-5">
-                                    <label for="presentAddress" class="form-label fw-bold small">Present Address</label>
-                                    <input type="text" class="form-control" style="height: 80px; padding: 10px;">
+                                    <label for="presentAddress" class="fw-bold">Present Address</label>
+                                    <textarea type="text" class="form-control" rows="4"></textarea>
                                 </div>
                             </div>
-                            </fieldset>
+                            <!-- </fieldset> -->
                             <br>
-                            <fieldset class="border p-4">
-                                <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">DOCUMENTS TO BE ATTACHED</legend>
+                            <!-- <fieldset class="border p-4"> -->
+                                <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px;">DOCUMENTS TO BE ATTACHED</legend>
                             <div class="row g-3">
                                 <div class="col-md-3">
-                                    <label for="coverLetter" class="form-label fw-bold small">Cover Letter</label>
-                                    <input type="file" class="form-control form-control-sm" id="coverLetter">
+                                    <label for="coverLetter" class="fw-bold">Cover Letter</label>
+                                    <input type="file" class="form-control form-control" id="coverLetter">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="cidAttachment" class="form-label fw-bold small">CID</label>
-                                    <input type="file" class="form-control form-control-sm" id="cidAttachment">
+                                    <label for="cidAttachment" class="fw-bold">CID</label>
+                                    <input type="file" class="form-control form-control" id="cidAttachment">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="cvAttachment" class="form-label fw-bold small">CV</label>
-                                    <input type="file" class="form-control form-control-sm" id="cvAttachment">
+                                    <label for="cvAttachment" class="fw-bold">CV</label>
+                                    <input type="file" class="form-control form-control" id="cvAttachment">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="securityClearance" class="form-label fw-bold small">Security
+                                    <label for="securityClearance" class="fw-bold">Security
                                         Clearance</label>
-                                    <input type="file" class="form-control form-control-sm" id="securityClearance">
+                                    <input type="file" class="form-control form-control" id="securityClearance">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="medicalCertificate" class="form-label fw-bold small">Medical
+                                    <label for="medicalCertificate" class="fw-bold">Medical
                                         Certificate</label>
-                                    <input type="file" class="form-control form-control-sm" id="medicalCertificate">
+                                    <input type="file" class="form-control form-control" id="medicalCertificate">
                                 </div>
                             </div>
                 <!-- Add a "Proceed" button here -->
                         <div style="text-align: right;">
                             <button type="button" class="btn btn-success btn-sm" id="proceedButton"
-                            style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Proceed</button>
+                            style="font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Proceed</button>
                         </div>
             </div>
             <!-- Education -->
@@ -198,8 +206,8 @@
                 {{-- <div class="container mt-4"> --}}
                     {{-- <div class="card" style="width: 500%;">
                         <div class="card-body"> --}}
-                            <fieldset class="border p-4" style="width: 103%;">
-                            <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">EDUCATION DETAILS</legend>
+                            <!-- <fieldset class="border p-4" style="width: 103%;"> -->
+                            <p class="float-none w-auto" style="font-weight: bold; font-size: 16px;">EDUCATION DETAILS</legend>
                             <div class="table-responsive">
                                 <table class="table table-bordered" style="width: 120%;">
                                     <thead>
@@ -298,8 +306,8 @@
                     <div class="container mt-4">
                         {{-- <div class="card" style="width: 500%;">
                             <div class="card-body"> --}}
-                                <fieldset class="border p-4" style="width: 105%;">
-                                    <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px; font-family: 'Georgia, serif;">EXPERIENCES</legend>
+                                <!-- <fieldset class="border p-4" style="width: 105%;"> -->
+                                    <legend class="float-none w-auto p-2" style="font-weight: bold; font-size: 16px;">EXPERIENCES</legend>
                                 <div class="table-responsive">
                                     <table class="table table-bordered" style="width: 140%;">
                                         <colgroup>
@@ -346,7 +354,7 @@
                                 <div class="text-left">
                                     <button class="btn btn-primary btn-sm" id="insertRowExp0">
                                         <i class="fas fa-plus"></i> <span
-                                            style="font-family: 'Georgia', serif; font-weight: bold; font-size: 12px;">Add
+                                            style="font-weight: bold; font-size: 12px;">Add
                                             new row</span>
                                     </button>
                                 </div>
@@ -356,7 +364,7 @@
                                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="disclaimerModalLabel" style="font-family: 'Georgia, serif; font-weight: bold;">Affirmation</h5>
+                                                <h5 class="modal-title" id="disclaimerModalLabel" style="font-weight: bold;">Affirmation</h5>
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -364,18 +372,18 @@
                                             <div class="modal-body">
                                                 <!-- Add your disclaimer content here -->
                                                 {{-- <h5>Affirmation</h5> --}}
-                                                <ul style="font-family: 'Georgia, serif; font-size: 14px;">
+                                                <ul style="font-size: 14px;">
                                                     <li>🚫 Not Convicted of a criminal offence</li>
                                                     <li>🚫 Not Terminated or compulsorily retired from any agency except in case of insolvency</li>
                                                     <li>🚫 Not Adjudged medically unfit for employment by a registered medical practitioner</li>
                                                 </ul>
                                                 <div class="form-check" style="display: flex; align-items: center;">
                                                     <input type="checkbox" class="form-check-input" id="agreeCheckbox">
-                                                    <label class="form-check-label" style="font-family: 'Georgia, serif; font-size: 18px; margin-left: 5px;" for="agreeCheckbox">
+                                                    <label class="form-check-label" style="font-size: 18px; margin-left: 5px;" for="agreeCheckbox">
                                                         I certify that my answers are true and complete to the best of my knowledge, and I have not furnished fake/forged testimonials/documents.
                                                     </label>
                                                 </div>
-                                                <p style="font-family: 'Georgia, serif; font-size: 18px; margin-top: 10px;">
+                                                <p style="font-size: 18px; margin-top: 10px;">
                                                     🤞If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.
                                                 </p>
                                             </div>
@@ -387,9 +395,9 @@
                                 </div>
                                 <div class="text-right mt-2">
                                     <button type="button" class="btn btn-secondary" id="backToPreviousEmployment"
-                                    style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #7d7d7d; color: white;">Back</button>
+                                    style="font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #7d7d7d; color: white;">Back</button>
 
-                                    <button type="button" class="btn btn-success" id="openModalBtn"   style="font-family: Georgia, serif; font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Done</button>
+                                    <button type="button" class="btn btn-success" id="openModalBtn"   style="font-size: 13px; width: 65px; padding: 5px 10px; border-radius: 5px; background-color: #4CAF50; color: white;">Done</button>
 
                                 </div>
                                 <script>
@@ -409,7 +417,7 @@
                                             }
                                         });
                                 </script>    
-                                </fieldset>
+                                <!-- </fieldset> -->
 {{-- 
                             </div>
                         </div> --}}

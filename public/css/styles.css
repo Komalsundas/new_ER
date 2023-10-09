@@ -1,8 +1,8 @@
 body {
-    font-family: Georgia, serif;
+    /* font-family: Georgia, serif; */
     background-color: #f0f0f0;
     margin: 0;
-    padding: 25px;
+    min-height: 100vh;
 }
 
 .card {
@@ -78,3 +78,15 @@ table {
     margin-bottom: 20px;
 }
 
+.form-control:focus {
+    border: 2px solid var(--success) !important;
+    box-shadow: unset !important;
+} 
+
+input {
+    font-family: var(--bs-body-font-family);
+}
+
+.ui-datepicker {
+    z-index: 99999 !important;
+}
