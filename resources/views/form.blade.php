@@ -121,6 +121,7 @@
                                 <option selected>Select One</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
+                                <option value="others">Others</option>
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -181,11 +182,7 @@
                             <label for="cvAttachment" class="form-label fw-bold small">CV</label>
                             <input type="file" class="form-control form-control-sm" id="cvAttachment">
                         </div>
-                        {{-- <div class="col-md-3">
-                            <label for="securityClearance" class="form-label fw-bold small">Security
-                                Clearance</label>
-                            <input type="file" class="form-control form-control-sm" id="securityClearance">
-                        </div> --}}
+                        
                         <div class="col-md-3">
                             <label for="medicalCertificate" class="form-label fw-bold small">Medical
                                 Certificate</label>
@@ -226,51 +223,51 @@
                     </p>
                     <div class="row g-2">
                         <div class="col-md-1">
-                            <label for="fullName" class="form-label fw-bold small">Subject</label>
-                            <label for="fullName" class="form-label fw-bold small">Marks</label>
+                            <label for="subject" class="form-label fw-bold small">Subject</label>
+                            <label for="subject" class="form-label fw-bold small">Marks</label>
                         </div>
                         <div class="col-md-1">
-                            <label for="fullName" class="form-label fw-bold small">English</label>
+                            <label for="eng" class="form-label fw-bold small">English</label>
                             <input type="text" class="form-control form-control-sm" id="eng">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                            <label for="dzo" class="form-label fw-bold small">Dzongkha</label>
                             <input type="text" class="form-control form-control-sm" id="dzo">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Math</label>
+                            <label for="mat" class="form-label fw-bold small">Math</label>
                             <input type="text" class="form-control form-control-sm" id="mat">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Physics</label>
+                            <label for="phy" class="form-label fw-bold small">Physics</label>
                             <input type="text" class="form-control form-control-sm" id="phy">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Chemistry</label>
+                            <label for="che" class="form-label fw-bold small">Chemistry</label>
                             <input type="text" class="form-control form-control-sm" id="che">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Biology</label>
+                            <label for="bio" class="form-label fw-bold small">Biology</label>
                             <input type="text" class="form-control form-control-sm" id="bio">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Economics</label>
+                            <label for="eco" class="form-label fw-bold small">Economics</label>
                             <input type="text" class="form-control form-control-sm" id="eco">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">History</label>
+                            <label for="his" class="form-label fw-bold small">History</label>
                             <input type="text" class="form-control form-control-sm" id="his">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Geography</label>
+                            <label for="geo" class="form-label fw-bold small">Geography</label>
                             <input type="text" class="form-control form-control-sm" id="geo">
                         </div>
                         <div class="col-md-1 text-center">
-                            <label for="cid" class="form-label fw-bold small">IT</label>
+                            <label for="it" class="form-label fw-bold small">IT</label>
                             <input type="text" class="form-control form-control-sm" id="it">
                         </div>
                         <div class="col-md-1">
-                            <label for="cid" class="form-label fw-bold small">Percentage</label>
+                            <label for="percentage" class="form-label fw-bold small">Percentage</label>
                             <input type="text" class="form-control form-control-sm" id="percent" readonly>
                         </div>
                         <hr>
@@ -319,39 +316,39 @@
                         <div id="scienceForm" style="display: none;">
                             <div class="row g-2">
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
-                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                    <label for="subject" class="form-label fw-bold small">Subject</label>
+                                    <label for="marks" class="form-label fw-bold small">Marks</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small ">English</label>
+                                    <label for="eng" class="form-label fw-bold small ">English</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="scieng">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <label for="dzo" class="form-label fw-bold small">Dzongkha</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="scidzo">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <label for="mat" class="form-label fw-bold small">Math</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="scimat">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Physics</label>
+                                    <label for="phy" class="form-label fw-bold small">Physics</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="sciphy">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Chemistry</label>
+                                    <label for="che" class="form-label fw-bold small">Chemistry</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="sciche">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Biology</label>
+                                    <label for="bio" class="form-label fw-bold small">Biology</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="scibio">
                                 </div>
                                 <div class="col-md-1 text-center">
-                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <label for="it" class="form-label fw-bold small">IT</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="sciit">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <label for="percentage" class="form-label fw-bold small">Percentage</label>
                                     <input type="text" class="form-control form-control-sm sciencemark" id="scipercent">
                                 </div>
                             </div>
@@ -360,39 +357,39 @@
                         <div id="commerceForm" style="display: none;">
                             <div class="row g-2">
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
-                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                    <label for="subject" class="form-label fw-bold small">Subject</label>
+                                    <label for="marks" class="form-label fw-bold small">Marks</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small">English</label>
+                                    <label for="eng" class="form-label fw-bold small">English</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comeng">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <label for="dzo" class="form-label fw-bold small">Dzongkha</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comdzo">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <label for="mat" class="form-label fw-bold small">Math</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="commat">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Commerce</label>
+                                    <label for="com" class="form-label fw-bold small">Commerce</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comcom">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Economic</label>
+                                    <label for="eco" class="form-label fw-bold small">Economic</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comeco">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Accountancy</label>
+                                    <label for="acc" class="form-label fw-bold small">Accountancy</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comacc">
                                 </div>
                                 <div class="col-md-1 text-center">
-                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <label for="it" class="form-label fw-bold small">IT</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="comit">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <label for="percentage" class="form-label fw-bold small">Percentage</label>
                                     <input type="text" class="form-control form-control-sm commersemark" id="compercent">
                                 </div>
                             </div>
@@ -401,35 +398,35 @@
                         <div id="artsForm" style="display: none;">
                             <div class="row g-2">
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small">Subject</label>
-                                    <label for="fullName" class="form-label fw-bold small">Marks</label>
+                                    <label for="subject" class="form-label fw-bold small">Subject</label>
+                                    <label for="marks" class="form-label fw-bold small">Marks</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="fullName" class="form-label fw-bold small">English</label>
+                                    <label for="eng" class="form-label fw-bold small">English</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="arteng">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Dzongkha</label>
+                                    <label for="dzo" class="form-label fw-bold small">Dzongkha</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="artdzo">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Math</label>
+                                    <label for="mat" class="form-label fw-bold small">Math</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="artmat">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Geography</label>
+                                    <label for="geo" class="form-label fw-bold small">Geography</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="artgeo">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">History</label>
+                                    <label for="his" class="form-label fw-bold small">History</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="arthis">
                                 </div>
                                 <div class="col-md-1 text-center">
-                                    <label for="cid" class="form-label fw-bold small">IT</label>
+                                    <label for="it" class="form-label fw-bold small">IT</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="artit">
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="cid" class="form-label fw-bold small">Percentage</label>
+                                    <label for="percentage" class="form-label fw-bold small">Percentage</label>
                                     <input type="text" class="form-control form-control-sm artsmark" id="artpercent">
                                 </div>
                             </div>
@@ -468,16 +465,7 @@
                             </div>
                             
                     </div>  
-                    {{-- <div class="row g-1">
-                        <div class="col-md-3">
-                            <label for="coverLetter" class="form-label fw-bold small">Academic Certificate</label>
-                            <input type="file" class="form-control form-control-sm" id="coverLetter">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="cidAttachment" class="form-label fw-bold small">Marksheet Certificate</label>
-                            <input type="file" class="form-control form-control-sm" id="cidAttachment">
-                        </div>
-                    </div> --}}
+                  
                     <br>
                     <div style="text-align: right;">
                         <button type="button" class="btn btn-secondary" id="backToproceedButton"
@@ -668,9 +656,7 @@
                                 });
                             </script>
                         </fieldset>
-                        {{-- 
-                            </div>
-                        </div> --}}
+                   
                     </div>
                 </div>
                 <!-- script for adding new row in exprience-->
