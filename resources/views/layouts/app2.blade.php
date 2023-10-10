@@ -177,7 +177,7 @@
     <!-- Footer -->
     <footer id="footer" class="fixed-footer">
         {{-- <div class="container"> --}}
-            <div class="row content-justify-between">
+            <div class="d-flex content-justify-between">
                 <div class="col-md-12 col-12 text-center text-lg-left text-md-left">
                     <p class="copyright">Copyright © Bhutan Telecom Limited
                         <?php echo date("Y"); ?>.
