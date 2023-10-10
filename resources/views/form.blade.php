@@ -36,22 +36,24 @@
     {{-- </head>
 
     <body> --}}
-    <div class="div1">
-        <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
-            <li class="nav-item active" role="presentation">
-                <button class="nav-link" id="home-tab0" data-bs-toggle="tab" data-bs-target="#home0" type="button"
+    <div class="div1  d-flex align-items-start">
+        <ul class="nav nav-tabs mb-3 mr-4 py-4 px-3 d-flex flex-column" 
+         id="myTab0" role="tablist"  style="background-color: rgba(0,0,0,0.05); border-radius: 4px; white-space: nowrap;
+         position: sticky; top: 110px; z-index: 1;">
+            <li class="nav-item active mb-2" role="presentation">
+                <button class="nav-link text-left w-100" id="home-tab0" data-bs-toggle="tab" data-bs-target="#home0" type="button"
                     role="tab" aria-controls="home0" aria-selected="true" style="font-family: Georgia, serif;">
                     Applicant Information
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link " id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0" type="button"
+                <button class="nav-link text-left w-100 " id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0" type="button"
                     role="tab" aria-controls="profile0" aria-selected="false"style="font-family: Georgia, serif;">
                     Eduaction
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="exp-tab0" data-bs-toggle="tab" data-bs-target="#exp0" type="button"
+                <button class="nav-link text-left w-100" id="exp-tab0" data-bs-toggle="tab" data-bs-target="#exp0" type="button"
                     role="tab" aria-controls="exp0" aria-selected="false"style="font-family: Georgia, serif;">
                     Previous Employement
                 </button>
@@ -59,7 +61,7 @@
 
         </ul>
         <br>
-        <div class="tab-content" id="myTabContent0">
+        <div class="tab-content px-4 py-3" id="myTabContent0" style="background-color: rgba(0,0,0,0.05); border-radius: 4px;">
             <div class="tab-pane fade show active" id="home0" role="tabpanel" aria-labelledby="home-tab0">
                 <!-- Applicant Information -->
                 <style>
