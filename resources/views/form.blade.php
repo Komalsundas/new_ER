@@ -130,7 +130,7 @@
                             <input type="text" class="form-control form-control-sm" id="email">
                         </div>
                         <div class="col-md-3">
-                            <label for="coverLetter" class="form-label fw-bold small">Passport size Photo</label>
+                            <label for="passport" class="form-label fw-bold small">Passport size Photo</label>
                             <input type="file" class="form-control form-control-sm" id="coverLetter" accept="image/png, image/jpeg">
                         </div>
                     </div>
@@ -442,7 +442,7 @@
                         style="font-weight: bold; font-size: 13px; font-family: 'Georgia, serif;">DEGREE</legend>  
                         <div class="form-row align-items-center">
                             <div class="col-4">
-                                <label for="schoolName" class="form-label fw-bold small">University Name</label>
+                                <label for="university" class="form-label fw-bold small">University Name</label>
                                 <input type="text" class="form-control mb-2" id="schoolName" placeholder="Enter university name">
                             </div>
                             <div class="col-3">
