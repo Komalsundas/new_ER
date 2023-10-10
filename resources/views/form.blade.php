@@ -179,11 +179,7 @@
                             <label for="cvAttachment" class="form-label fw-bold small">CV</label>
                             <input type="file" class="form-control form-control-sm" id="cvAttachment">
                         </div>
-                        {{-- <div class="col-md-3">
-                            <label for="securityClearance" class="form-label fw-bold small">Security
-                                Clearance</label>
-                            <input type="file" class="form-control form-control-sm" id="securityClearance">
-                        </div> --}}
+                        
                         <div class="col-md-3">
                             <label for="medicalCertificate" class="form-label fw-bold small">Medical
                                 Certificate</label>
@@ -466,16 +462,7 @@
                             </div>
                             
                     </div>  
-                    {{-- <div class="row g-1">
-                        <div class="col-md-3">
-                            <label for="coverLetter" class="form-label fw-bold small">Academic Certificate</label>
-                            <input type="file" class="form-control form-control-sm" id="coverLetter">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="cidAttachment" class="form-label fw-bold small">Marksheet Certificate</label>
-                            <input type="file" class="form-control form-control-sm" id="cidAttachment">
-                        </div>
-                    </div> --}}
+                  
                     <br>
                     <div style="text-align: right;">
                         <button type="button" class="btn btn-secondary" id="backToproceedButton"
@@ -666,9 +653,7 @@
                                 });
                             </script>
                         </fieldset>
-                        {{-- 
-                            </div>
-                        </div> --}}
+                   
                     </div>
                 </div>
                 <!-- script for adding new row in exprience-->
