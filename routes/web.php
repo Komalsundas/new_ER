@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 use App\Livewire\CreatePost;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\UserController;
  
 Route::get('/counter', Counter::class);
 Route::get('/create-post', CreatePost::class);
@@ -63,6 +63,8 @@ Route::middleware(['auth', 'verified'])->group(function(){
 Route::get('/candidate', function () {
     return view('candidate');
 })->name('candidate');
+
+Route::post('/store', [UserController::class, 'store'])->name('store');//to store canididate data
 
 
 // Route::get('/dashboard', function () {

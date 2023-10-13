@@ -28,6 +28,9 @@ class AdminController extends Controller
      */
     public function saveVacancy(Request $request)
     {
+    
+
+
         $request->validate([
             'position' => ['required', 'string', 'max:255'],
             'minQuali' => ['required', 'numeric'],
@@ -78,7 +81,7 @@ class AdminController extends Controller
                 $vacancy->save();
         }
         
-        return redirect('createVacancy');
+        return redirect('listVacancy');
     }
 
     /**
