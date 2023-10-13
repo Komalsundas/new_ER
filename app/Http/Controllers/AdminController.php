@@ -78,7 +78,7 @@ class AdminController extends Controller
                 $vacancy->save();
         }
         
-        return redirect('createVacancy');
+        return redirect('listVacancy');
     }
 
     /**
@@ -123,6 +123,23 @@ public function dashboard()
 
     return view('dashboard', compact('vacancies'));
 }
+
+
+public function deleteVacancy($id)
+{
+    // Find the vacancy by ID
+    $vacancy = Vacancy::find($id);
+
+    if (!$vacancy) {
+        return redirect()->back()->with('error', 'Vacancy not found.');
+    }
+
+    // Perform deletion logic
+    $vacancy->delete();
+
+    return redirect()->route('vacancy-list')->with('success', 'Vacancy deleted successfully.');
+}
+
 
 
 

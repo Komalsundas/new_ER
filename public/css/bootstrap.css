@@ -2499,6 +2499,17 @@ fieldset:disabled a.btn {
   border-radius: 100px;
 }
 
+.btn-danger {
+  color: #fff;
+  background-color: #e02c2c;
+  border-color: #e72020;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  border-radius: 100px;
+  
+}
 .btn-success:hover {
   color: #fff;
   background-color: #218838;
