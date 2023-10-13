@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Applicant;
 use App\Models\Education;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
     //
     public function store(Request $request)
     {
-        dd($request);
+        // dd($request);
         // Validate the form data
         $validatedUserData = $request->validate([
             'name' => 'required|string|max:255',
@@ -29,7 +30,6 @@ class UserController extends Controller
             'cidcopy' => 'required|file|mimes:pdf|max:2048',
             'cv' => 'required|file|mimes:pdf|max:2048',
             'mc' => 'required|file|mimes:pdf|max:2048',
-            // Add validation rules for other field
         ]);
         if($request->hasFile('passport_photo')){
             $file= $request->file('passport_photo');
@@ -167,29 +167,52 @@ class UserController extends Controller
         ]);
         $degree_education->save();
 
-        $experience= new experience([
-            'company' => $request->company,
-            'year' => $request->x_year,
-            'course_name' => "",
-            'grade' => 10,
-            'stream' =>  'N',
-            'eng' => $request->x_eng,
-            'dzo' => $request->x_dzo,
-            'math' =>$request->x_mat,
-            'phy' => $request->x_phy,
-            'che' => $request->x_che,
-            'bio' => $request->x_bio,
-            'his' => $request->x_his,
-            'geo' => $request->x_geo,
-            'eco' => $request->x_eco,
-            'it' =>  $request->x_it,
-            'com' => 0,
-            'acc' => 0,
-            'aggregate' => $request->x_percentage,
-            'marksheet'=>$request->x_marksheet,
-            'applicant_id'=>$applicant->id
-        ]);
-        $x_education->save();
+        //to save experience data
+        if($request->company != null){
+            foreach($request->company as $company){
+                $i = 0;
+                $file= $request->file('document')[$i];
+                $ex_path='experience'.$i.'.'.$file->getClientOriginalExtension();
+                $file->storeAs ($request->cid,$ex_path,'public');
+                $experience = [
+                    'company' => $request->company[$i],
+                    'post' => $request->post[$i],
+                    'from' => $request->from[$i],
+                    'to' => $request->to[$i],
+                    'place' => $request->place[$i],
+                    'reason' => $request->reason[$i],
+                    'document' => $ex_path,
+                    'applicant_id' => $applicant->id,
+                ];
+                
+                DB::table('employements')->insert($experience);
+                $i++;
+            }
+        }
+
+        // $experience= new experience([
+        //     'company' => $request->company,
+        //     'year' => $request->x_year,
+        //     'course_name' => "",
+        //     'grade' => 10,
+        //     'stream' =>  'N',
+        //     'eng' => $request->x_eng,
+        //     'dzo' => $request->x_dzo,
+        //     'math' =>$request->x_mat,
+        //     'phy' => $request->x_phy,
+        //     'che' => $request->x_che,
+        //     'bio' => $request->x_bio,
+        //     'his' => $request->x_his,
+        //     'geo' => $request->x_geo,
+        //     'eco' => $request->x_eco,
+        //     'it' =>  $request->x_it,
+        //     'com' => 0,
+        //     'acc' => 0,
+        //     'aggregate' => $request->x_percentage,
+        //     'marksheet'=>$request->x_marksheet,
+        //     'applicant_id'=>$applicant->id
+        // ]);
+        // $x_education->save();
 
         // Store the data in the database
         // You can use Eloquent or any other method here
