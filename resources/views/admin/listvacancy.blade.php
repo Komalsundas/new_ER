@@ -26,7 +26,7 @@
                         <th scope="row">{{$vacancy->id}}</th>
                         <td>{{$vacancy->position}}</td>
                         <td>{{$vacancy->slot}}</td>
-                        <td>{{$vacancy->minQualification}}</td>
+                        <td>{{$vacancy->qualification}} in {{$vacancy->course}}</td>
                         <td>{{$vacancy->remuneration}}
                         <td>
 

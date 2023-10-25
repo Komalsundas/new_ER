@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Applicant;
 use App\Models\Education;
@@ -85,10 +85,8 @@ class UserController extends Controller
 
 
 
-        //education
-
+        //save education 
         if($request->hasFile('x_marksheet')){
-            //for mc
             $file= $request->file('x_marksheet');
             $x_path='x_marksheet'.'.'.$file->getClientOriginalExtension();
             $file->storeAs ($request->cid,$x_path,'public');
@@ -113,12 +111,17 @@ class UserController extends Controller
             'com' => 0,
             'acc' => 0,
             'aggregate' => $request->x_percentage,
-            'marksheet'=>$request->x_marksheet,
+            'marksheet'=>$x_path,
             'applicant_id'=>$applicant->id
         ]);
         $x_education->save();
 
         //Class 12
+        if($request->hasFile('xii_marksheet')){
+            $file= $request->file('xii_marksheet');
+            $xii_path='xii_marksheet'.'.'.$file->getClientOriginalExtension();
+            $file->storeAs ($request->cid,$xii_path,'public');
+        }
         $xii_education= new Education([
             'institute' => $request->xii_institute,
             'year' => $request->xii_year,
@@ -138,11 +141,17 @@ class UserController extends Controller
             'com' => $request->xii_com,
             'acc' => $request->xii_acc,
             'aggregate' => $request->xii_percent,
-            'marksheet'=>$request->xii_marksheet,
+            'marksheet'=>$xii_path,
             'applicant_id'=>$applicant->id
         ]);
         $xii_education->save();
 
+        //degree
+        if($request->hasFile('degree_marksheet')){
+            $file= $request->file('degree_marksheet');
+            $degree_path='degree_marksheet'.'.'.$file->getClientOriginalExtension();
+            $file->storeAs ($request->cid,$degree_path,'public');
+        }
         $degree_education= new Education([
             'institute' => $request->degree_institute,
             'year' => $request->degree_year,
@@ -162,21 +171,22 @@ class UserController extends Controller
             'com' => 0,
             'acc' => 0,
             'aggregate' => $request->degree_percentage,
-            'marksheet'=>$request->degree_marksheet,
+            'marksheet'=>$degree_path,
             'applicant_id'=>$applicant->id
         ]);
         $degree_education->save();
 
         //to save experience data
         if($request->company != null){
+            $i = 0;
             foreach($request->company as $company){
-                $i = 0;
                 $file= $request->file('document')[$i];
+                // $ex_path= $file->getClientOriginalName().'.'.$file->getClientOriginalExtension();
                 $ex_path='experience'.$i.'.'.$file->getClientOriginalExtension();
                 $file->storeAs ($request->cid,$ex_path,'public');
                 $experience = [
                     'company' => $request->company[$i],
-                    'post' => $request->post[$i],
+                    'post' => $request->position[$i],
                     'from' => $request->from[$i],
                     'to' => $request->to[$i],
                     'place' => $request->place[$i],
@@ -228,7 +238,10 @@ class UserController extends Controller
         // $applicantDetails->academicMarks()->associate($academicMarks);
     
         // Redirect back or to a success page
-        return redirect()->back()->with('success', 'Form submitted successfully!');
+        $title = 'Submitted';
+        Session::flash('success', 'Application submitted successfully.');
+        return redirect()->back()->with(['title'=> $title]);
+        // return redirect()->back()->with('success', 'Form submitted successfully!');
        
 
     }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Qualification;
 use App\Models\EmploymentType;
@@ -78,7 +78,10 @@ class AdminController extends Controller
                 $vacancy->save();
         }
         
-        return redirect('listVacancy');
+        $title = 'Created';
+        Session::flash('success', 'Vacancy created successfully.');
+        return redirect()->back()->with(['title'=> $title]);
+        // return redirect('listVacancy');
     }
 
     /**
@@ -86,17 +89,20 @@ class AdminController extends Controller
      */
     public function showVacancy()
     {
-        $vacancies = DB::table('vacancies')
-                        ->select('vacancies.*')
+        $vacancies = DB::table('vacancies as v')
+                        ->join('qualifications as q', 'v.minQualification', 'q.id')
+                        ->select('v.*', 'q.qualification')
                         ->get();
         return view('admin.listVacancy', compact('vacancies'));
     }
 
     public function showVacancyUser()
 {
-    $vacancies = DB::table('vacancies')
-                    ->select('vacancies.*')
-                    ->get();
+    $vacancies = DB::table('vacancies as v')
+                        ->join('qualifications as q', 'v.minQualification', 'q.id')
+                        ->join('employment_types as et', 'et.id', 'v.empType')
+                        ->select('v.*', 'q.qualification', 'et.employType')
+                        ->get();
 
     return view('vacancy', compact('vacancies'));
 }
