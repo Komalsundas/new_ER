@@ -6,6 +6,7 @@ use App\Livewire\Counter;
 use App\Livewire\CreatePost;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+
  
 Route::get('/counter', Counter::class);
 Route::get('/create-post', CreatePost::class);
@@ -47,6 +48,9 @@ Route::get('/userprofile', function () {
     return view('userprofile'); // Replace 'vacancy' with the actual name of your Blade view
 })->name('userprofile'); // Give the route a name (optional but recommended)
 
+
+Route::post('/store', [UserController::class, 'store'])->name('store');//to store canididate data
+
 // Route::get('/userprofile2', function () {
 //     return view('userprofile2'); // Replace 'vacancy' with the actual name of your Blade view
 // })->name('userprofile2'); // Give the route a name (optional but recommended)
@@ -64,8 +68,6 @@ Route::get('/candidate', function () {
     return view('candidate');
 })->name('candidate');
 
-Route::post('/store', [UserController::class, 'store'])->name('store');//to store canididate data
-
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -81,6 +83,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::delete('/delete-vacancy/{id}', [AdminController::class, 'deleteVacancy'])->name('delete-vacancy');
+// Route::delete('/delete-vacancy/{id}', 'AdminController@deleteVacancy')->name('delete-vacancy');
+
+Route::get('/vacancy-list', [AdminController::class, 'showVacancy'])->name('vacancy-list');
+
 
 
 require __DIR__.'/auth.php';

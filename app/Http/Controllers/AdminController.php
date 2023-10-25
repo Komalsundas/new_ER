@@ -128,5 +128,22 @@ public function dashboard()
 }
 
 
+public function deleteVacancy($id)
+{
+    // Find the vacancy by ID
+    $vacancy = Vacancy::find($id);
+
+    if (!$vacancy) {
+        return redirect()->back()->with('error', 'Vacancy not found.');
+    }
+
+    // Perform deletion logic
+    $vacancy->delete();
+
+    return redirect()->route('vacancy-list')->with('success', 'Vacancy deleted successfully.');
+}
+
+
+
 
 }
