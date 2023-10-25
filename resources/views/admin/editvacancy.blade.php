@@ -2,6 +2,17 @@
 @section('content')
     <!-- Include the datepicker library CSS and JavaScript files -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-TQVYFAdVlQTd5C5Vl9EJLlP6tVT+oJ9y" crossorigin="anonymous">
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-eMNCOFYrNE5a6BWPItzNBwyNXlZKCD4SIUibotznbkFxg3Dv1kob6tF5Al1VScQV" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6XnHiBBjvqkOGmfCdu1JqownxDMG7Pbo" crossorigin="anonymous"></script>
+
+
+
+    
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(document).ready(function() {
@@ -97,13 +108,57 @@
 
             <br>
             <!-- Delete Button -->
-        
-         
-            <form action="{{ route('delete-vacancy', $vacancy->id) }}" method="POST">
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Delete Confirmation</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this item?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger" id="confirmDelete">Delete</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    var rowToDelete;
+            
+                    // Show delete modal when delete button is clicked
+                    $(".deleteRow").on("click", function () {
+                        $("#deleteModal").modal("show");
+                        
+                        // Get the row to be deleted (you might need to adjust this based on your HTML structure)
+                        rowToDelete = $(this).closest("tr");
+                    });
+            
+                    // Handle deletion on modal confirmation
+                    $("#confirmDelete").on("click", function () {
+                        rowToDelete.remove();
+                        $("#deleteModal").modal("hide");
+            
+                        // Show a success message (you might want to customize this)
+                        alert("Deleted successfully");
+                    });
+                });
+            </script>
+    
+            <form action="{{ route('delete-vacancy', $vacancy->id) }}" method="POST" id="deleteForm">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn-danger" id="deleteBtn">Delete</button>
+                <button type="button" class="btn-danger" id="deleteBtn" data-toggle="modal" data-target="#deleteModal">
+                    Delete
+                </button>
             </form>
+            
             
             
         </fieldset>

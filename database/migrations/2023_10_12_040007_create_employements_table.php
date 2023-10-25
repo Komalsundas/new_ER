@@ -19,7 +19,9 @@ return new class extends Migration
             $table->integer('to');
             $table->string('place');
             $table->string('reason');
-            $table->string('document');    
+            $table->string('document'); 
+            // $table->string('skills')->nullable();  
+            $table->integer('applicant_id'); 
             $table->timestamps();
            
         });

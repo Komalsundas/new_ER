@@ -61,10 +61,10 @@
 
     <div class="div1"></div>
 
-<div class="col-md-8 mx-auto pb-5" style="margin-bottom: 88px;">
-    
-<h3 class="display-6">Create Vacancy</h3>
-<div class="border border-success mt-2" style="width: 167px; border-width: 1.5px !important;"></div>
+    <div class="col-md-8 mx-auto pb-5" style="margin-bottom: 88px;">
+
+        <h3 class="display-6">Create Vacancy</h3>
+        <div class="border border-success mt-2" style="width: 167px; border-width: 1.5px !important;"></div>
 
         <!-- <fieldset class="border p-2"> -->
         <!-- <legend class="float-none w-auto p-2">Create Vacancy</legend> -->
@@ -122,30 +122,52 @@
                     </div>
                 </div> --}}
                 <div class="col-md-6">
-                <div>
-                    <x-input-label for="dateline" :value="__('Application Dateline')" class="form-label fw-bold small" />
-                    <input id="dateline" name="dateline" type="text" class="datetime form-control form-control-sm mt-1 block w-full" required
-                        autofocus autocomplete="dateline" />
-                    <x-input-error class="mt-2" :messages="$errors->get('dateline')" />
-                </div>
+                    <div>
+                        <x-input-label for="dateline" :value="__('Application Dateline')" class="form-label fw-bold small" />
+                        <input id="dateline" name="dateline" type="text"
+                            class="datetime form-control form-control-sm mt-1 block w-full" required autofocus
+                            autocomplete="dateline" />
+                        <x-input-error class="mt-2" :messages="$errors->get('dateline')" />
+                    </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                     <label for="tor" class="form-label fw-bold">TOR</label>
                     <input type="file" class="form-control" id="tor" name="tor" required>
                 </div>
+                <!--save modal for creating new vacancy-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to save?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-2">
                     <div class="text-right mt-2">
                         <label for="tor" class="form-label fw-bold"></label>
-                        <button type="submit" class="btn btn-success px-5" style="width: unset; border-radius: 4px !important;" id="submitBtn">SAVE</button>
+                        <button type="button" class="btn btn-success px-5"
+                            style="width: unset; border-radius: 4px !important;" id="submitBtn" data-toggle="modal"
+                            data-target="#myModal">SAVE</button>
                     </div>
                 </div>
 
+
             </div>
-            <div class="text-right">
-                <button type="submit" class="btn btn-success px-5" style="width: unset;" id="submitBtn" 
-                style="border-radius: 4px !important;">SAVE</button>
-            </div>
+
         </form>
         <!-- </fieldset> -->
     </div>
