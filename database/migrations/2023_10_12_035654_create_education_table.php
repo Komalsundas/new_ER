@@ -28,6 +28,8 @@ return new class extends Migration
             $table->integer('it');
             $table->integer('com')->nullable();
             $table->integer('acc')->nullable();
+            $table->integer('his')->nullable();
+            $table->integer('geo')->nullable();
             $table->integer('aggregate');
             $table->string('marksheet');
             $table->integer('applicant_id');

@@ -14,9 +14,7 @@ class Employement extends Model
        'from',
        'to',
        'place',
-       'reason',
+    //    'reason',
        'document',
-       'document',
-    //    'skills'
     ];
 }

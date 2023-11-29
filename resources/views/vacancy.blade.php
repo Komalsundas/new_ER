@@ -58,12 +58,12 @@
                             <td>{{$vacancy->remuneration}}</td>
                             <td>{{$vacancy->employType}}</td>
                             <td><i class="fa fa-download"></i>
-                                <a href="{{ asset('storage/'. $vacancy->tor) }}" target="_blank">TOR for software
-                                    developer
+                                <a href="{{ asset('storage/'. $vacancy->tor) }}" target="_blank">TOR for {{$vacancy->position}}
+                                
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ route('form') }}" class="icon-button">
+                                <a href="{{ route('form', $vacancy->id) }}" class="icon-button">
                                     <i class="icon far fa-edit"></i>
                                     Apply
                                 </a>

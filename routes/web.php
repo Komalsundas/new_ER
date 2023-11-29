@@ -25,9 +25,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form', function () {
-    return view('form'); // Replace 'form' with the actual name of your Blade view
-})->name('form'); // Give the route a name (optional but recommended)
+Route::get('/form/{id}', [UserController::class, 'viewForm'])->name('form');
+
+// Route::get('/form', function () {
+//     return view('form'); // Replace 'form' with the actual name of your Blade view
+// })->name('form'); // Give the route a name (optional but recommended)
 
 
 // Route::get('/vacancy', function () {
@@ -44,9 +46,10 @@ Route::get('/novacancy', function () {
     return view('novacancy'); // Replace 'vacancy' with the actual name of your Blade view
 })->name('novacancy'); // Give the route a name (optional but recommended)
 
-Route::get('/userprofile', function () {
-    return view('userprofile'); // Replace 'vacancy' with the actual name of your Blade view
-})->name('userprofile'); // Give the route a name (optional but recommended)
+// Route::get('/userprofile', [AdminController::class, 'userprofile'])->name('userprofile');
+// Route::get('/userprofile', function () {
+//     return view('userprofile'); // Replace 'vacancy' with the actual name of your Blade view
+// })->name('userprofile'); // Give the route a name (optional but recommended)
 
 
 Route::post('/store', [UserController::class, 'store'])->name('store');//to store canididate data
@@ -62,11 +65,13 @@ Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/listVacancy', [AdminController::class, 'showVacancy'])->name('show-vacancy');
  
     Route::get('/listVacancy/{id}', [AdminController::class, 'viewVacancy'])->name('view-vacancy');
+    Route::get('/showcanidate/{id}', [AdminController::class, 'showcanidate'])->name('showcanidate');
+    Route::get('/viewCandidate/{id}', [AdminController::class, 'viewCandidate'])->name('view-candidate');
 });
 
-Route::get('/candidate', function () {
-    return view('candidate');
-})->name('candidate');
+// Route::get('/candidate', function () {
+//     return view('candidate');
+// })->name('candidate');
 
 
 // Route::get('/dashboard', function () {

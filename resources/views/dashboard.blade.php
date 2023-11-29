@@ -109,7 +109,7 @@
                                                 <div class="card-body">
                                                     <h5 class="card-title">{{ $vacancy->position }}</h5>
                                                     <p class="card-text">Slots: {{ $vacancy->slot }}</p>
-                                                    <a href="{{ route('view-vacancy', $vacancy->id) }}" class="btn btn-primary">View Candidates</a>
+                                                    <a href="{{ route('showcanidate', $vacancy->id) }}" class="btn btn-primary">View Candidates</a>
                                                 </div>
                                             </div>
                                         </div>

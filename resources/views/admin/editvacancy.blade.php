@@ -28,7 +28,7 @@
     <div class="container">
        
         <fieldset class="border p-2">
-            <legend class="float-none w-auto p-2">Edit Vacancy</legend>
+            <legend class="float-none w-auto p-2">Edit Vacancyyyy</legend>
 
             <form action="{{ route('save-vacancy') }}" method="post" enctype="multipart/form-data">
                 @csrf

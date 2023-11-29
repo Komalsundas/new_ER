@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('cidcopy');
             $table->string('cv');
             $table->string('mc');
+            $table->string('vacancy_id');
             $table->timestamps();
     
         });

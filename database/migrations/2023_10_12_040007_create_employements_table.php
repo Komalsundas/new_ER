@@ -15,12 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('company');
             $table->string('post');
-            $table->integer('from');
-            $table->integer('to');
+            $table->date('from');
+            $table->date('to');
             $table->string('place');
-            $table->string('reason');
-            $table->string('document');
-            $table->integer('applicant_id');     
+            // $table->string('reason');
             $table->string('document'); 
             // $table->string('skills')->nullable();  
             $table->integer('applicant_id'); 

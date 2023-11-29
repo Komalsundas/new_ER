@@ -8,6 +8,7 @@ use App\Models\EmploymentType;
 use App\Models\Vacancy;
 use App\Models\User;
 use DB;
+use App\Models\Applicant;
 
 class AdminController extends Controller
 {
@@ -149,6 +150,52 @@ public function deleteVacancy($id)
     return redirect()->route('vacancy-list')->with('success', 'Vacancy deleted successfully.');
 }
 
+
+// public function showcanidate(int $id){
+//     $applicant = DB::table('applicants')
+//                     ->where('vacancy_id', $id)
+//                     ->get();
+//     return view('admin.showcanidate', compact('applicant'));
+// }
+
+// public function showcanidate(int $id) {
+//     $applicant = DB::table('applicants')
+//                     ->join('vacancies', 'applicants.vacancy_id', '=', 'vacancies.id')
+//                     ->where('vacancies.id', $id)
+//                     ->select('applicants.*', 'vacancies.position')
+//                     ->get();
+//     return view('admin.showcanidate', compact('applicant'));
+// }
+
+public function showcanidate(int $id) {
+    $applicants = DB::table('applicants')
+                    ->join('education', 'applicants.id', '=', 'education.applicant_id')
+                    ->where('applicants.vacancy_id', $id)
+                    ->orderByDesc('education.aggregate') // Order by aggregate marks in descending order
+                    ->select('applicants.*', 'education.*')
+                    ->get();
+
+    return view('admin.showcanidate', compact('applicants'));
+}
+
+
+
+ /**
+     * Display the specified vacancy.
+     */
+    public function viewCandidate(int $id)
+    {
+        $applicant = DB::table('applicants as a')
+        ->join('vacancies as v', 'v.id', 'a.vacancy_id')
+        ->select('a.*', 'v.position')
+        ->where('a.id', $id)
+    ->first();
+
+    $education = DB::table('education')
+                    ->where('applicant_id', $applicant->id)
+                    ->get();
+    return view('userprofile', compact('applicant', 'education'));
+}
 
 
 

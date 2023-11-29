@@ -24,6 +24,8 @@ class Education extends Model
         'it',
         'com',
         'acc',
+        'his',
+        'geo',
         'aggregate',
         'marksheet',
         'applicant_id'
