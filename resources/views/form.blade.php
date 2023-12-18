@@ -855,7 +855,6 @@
                 changeYear: true
             });
             
-
         });
 
         // Remove row when delete btn is clicked
